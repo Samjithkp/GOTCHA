@@ -26,3 +26,4 @@ Attackers often disguise malware by renaming executables as harmless files like 
 ```bash
 python3 file_type_identifier.py
 # GOTCHA
+# GOTCHA
