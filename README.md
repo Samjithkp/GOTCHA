@@ -1,17 +1,15 @@
 # 🛡️ GOTCHA – File Type Identification Tool
 
-A Linux-based defensive cybersecurity tool that detects disguised or suspicious files using **magic number analysis**.
+A Linux-based defensive cybersecurity tool that detects disguised or suspicious files using **magic number analysis** instead of trusting file extensions.
 
 ---
 
 ## 📌 Overview
 
-**GOTCHA** is a Linux-based defensive cybersecurity tool that detects disguised or suspicious files by analyzing
-**binary headers (magic numbers)** instead of trusting file extensions.
+**GOTCHA** detects files that are disguised as harmless formats (such as `.jpg`, `.pdf`, or `.txt`) by analyzing **binary headers (magic numbers)**.
 
-Attackers often rename malicious executables as harmless-looking files such as `.jpg`, `.pdf`, or `.txt`.  
-GOTCHA exposes the **real file type**, highlights mismatches, and assigns a **risk-based status** to help prevent
-accidental execution.
+Attackers often rename malicious executables to trick users.  
+GOTCHA exposes the **real file type**, highlights mismatches, and assigns a **risk-based status** to help prevent accidental execution.
 
 ---
 
@@ -25,7 +23,7 @@ accidental execution.
   - **LOW** – Safe file  
   - **MEDIUM** – Misleading file  
   - **HIGH** – Disguised executable  
-- 🎨 Custom GOTCHA ASCII banner for branding  
+- 🎨 Custom **GOTCHA ASCII banner**
 
 ---
 
@@ -33,11 +31,11 @@ accidental execution.
 
 File extensions **cannot be trusted**.
 
-| File Name   | Real Type         | Risk   |
-|------------|-------------------|--------|
-| image.jpg  | ELF executable    | HIGH   |
-| script.sh  | Binary executable | MEDIUM |
-| notes.txt  | Plain text        | LOW    |
+| File Name  | Real Type         | Risk   |
+|-----------|-------------------|--------|
+| image.jpg | ELF executable    | HIGH   |
+| script.sh | Binary executable | MEDIUM |
+| notes.txt | Plain text        | LOW    |
 
 GOTCHA helps detect such threats **before execution**, supporting safer file handling.
 
@@ -60,88 +58,105 @@ GOTCHA helps detect such threats **before execution**, supporting safer file han
 
 ## 📦 Installation & Usage
 
-### Prerequisites
+### 🔹 Prerequisites
 - Linux (Kali Linux recommended)
 - Python 3
 
 Check Python version:
+
 ```bash
 python3 --version
+```
 
-Clone the Repository
+📦 Installation & Usage
 
+```bash
+# Clone the repository
 git clone https://github.com/Samjithkp/GOTCHA.git
 
-Navigate to the Project Directory
-
+# Navigate to the project directory
 cd GOTCHA
 
-Make the Script Executable (Optional)
-
+# Make the script executable (optional)
 chmod +x GOTCHA.py
 
-Run the Tool
-
+# Run the tool
 python3 GOTCHA.py
+```
 
-🧪 Example Output
-🟢 Safe File
+📦 One-Line Run Example
 
+```bash
+git clone https://github.com/Samjithkp/GOTCHA.git && cd GOTCHA && chmod +x GOTCHA.py && python3 GOTCHA.py
+```
+
+<br><br>
+## 🧪 Example Output
+### 🟢 Safe File
+
+```bash
 File: text.txt
 Detected: Text File
 Status: SAFE TEXT FILE
 Risk Level: LOW
+```
 
 🔴 Disguised Executable
 
+```bash
 File: fake.jpg
 Detected: ELF Executable
 Status: DISGUISED EXECUTABLE
 Risk Level: HIGH
+```
+<br>
 
-🧑‍💼 Use Cases
 
-    Malware analysis and triage
 
-    SOC analyst file validation
+## 🧑‍💼 Use Cases
 
-    Digital forensics investigations
+- Malware analysis and triage  
+- SOC analyst file validation  
+- Digital forensics investigations  
+- Security awareness demonstrations  
+- Learning malware masquerading techniques  
 
-    Security awareness demonstrations
+---
 
-    Learning malware masquerading techniques
+## 🎯 Learning Outcomes
 
-🎯 Learning Outcomes
+- Understanding file masquerading attacks  
+- Practical use of magic numbers  
+- Defensive cybersecurity mindset  
+- Linux-based Python tooling  
 
-    Understanding file masquerading attacks
+---
 
-    Practical use of magic numbers
+## ⚠️ Disclaimer
 
-    Defensive cybersecurity mindset
+This tool is developed strictly for **educational and defensive security purposes**.  
+Do **not** use it for malicious activities.
 
-    Linux-based Python tooling
+---
 
-⚠️ Disclaimer
+## 🚀 Future Enhancements
 
-This tool is developed strictly for educational and defensive security purposes.
-Do not use it for malicious activities.
-📌 Future Enhancements
+- Folder / bulk file scanning  
+- Color-coded status output  
+- Logging scan results to file  
+- YARA rule integration  
+- GUI version  
 
-    Folder / bulk file scanning
+---
 
-    Color-coded status output
+## 👤 Author
 
-    Logging scan results to file
+**Samjith K P**  
+Cyber Security Enthusiast 
+🔗 LinkedIn: https://www.linkedin.com/in/samjith-k-p  
 
-    YARA rule integration
+---
 
-    GUI version
+## ⭐ Support
 
-👤 Author
-
-Samjith K P
-Cyber Security Enthusiast | Malware Analysis | SOC | Pentesting
-🔗 LinkedIn: https://www.linkedin.com/in/samjith-k-p
-⭐ Support
-
-If you find this project useful, consider giving it a ⭐ star on GitHub!
+If you find this project useful, consider giving it a ⭐ **star** on GitHub!
